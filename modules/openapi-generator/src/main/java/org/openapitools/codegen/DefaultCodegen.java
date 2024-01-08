@@ -5540,7 +5540,7 @@ public class DefaultCodegen implements CodegenConfig {
                 }
                 codegenSecurities.add(cs);
             } else {
-                once(LOGGER).error("Unknown type `{}` found in the security definition `{}`.", securityScheme.getType(), securityScheme.getName());
+                once(LOGGER).warn("Unknown type `{}` found in the security definition `{}`.", securityScheme.getType(), securityScheme.getName());
             }
         }
 

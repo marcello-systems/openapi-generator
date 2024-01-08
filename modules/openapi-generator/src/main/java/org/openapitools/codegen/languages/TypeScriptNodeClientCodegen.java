@@ -55,7 +55,7 @@ public class TypeScriptNodeClientCodegen extends AbstractTypeScriptClientCodegen
 
         modifyFeatureSet(features -> features.includeSecurityFeatures(SecurityFeature.BearerToken));
 
-        typeMapping.put("file", "RequestFile");
+        typeMapping.put("file", "any");
         // RequestFile is defined as: `type RequestFile = string | Buffer | ReadStream | RequestDetailedFile;`
         languageSpecificPrimitives.add("Buffer");
         languageSpecificPrimitives.add("ReadStream");

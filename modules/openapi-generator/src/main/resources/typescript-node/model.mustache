@@ -1,7 +1,9 @@
 {{>licenseInfo}}
 {{#models}}
 {{#model}}
-import { RequestFile } from './models';
+{{#generateApis}}
+ import { RequestFile } from './models';
+{{/generateApis}}
 {{#tsImports}}
 import { {{classname}} } from '{{filename}}';
 {{/tsImports}}

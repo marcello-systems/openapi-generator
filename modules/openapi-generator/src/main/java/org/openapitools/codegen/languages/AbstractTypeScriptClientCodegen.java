@@ -536,7 +536,7 @@ public abstract class AbstractTypeScriptClientCodegen extends DefaultCodegen imp
             return nameMapping.get(name);
         }
 
-        name = sanitizeName(name, "[^\\w$]");
+        name = sanitizeName(name, "[^\\w@$]");
 
         if ("_".equals(name)) {
             name = "_u";
@@ -549,7 +549,7 @@ public abstract class AbstractTypeScriptClientCodegen extends DefaultCodegen imp
     }
 
     private String toSafeIdentifier(String name) {
-        if (isReservedWord(name) || name.matches("^\\d.*")) {
+        if (isReservedWord(name)) {
             name = escapeReservedWord(name);
         }
         return name;
